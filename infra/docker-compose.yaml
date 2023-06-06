@@ -8,9 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    build:
-      context: ../
-      image: eg0rian/yamdb_final:latest
+    image: eg0rian/yamdb_final:latest
     restart: always
     volumes:
       - static_value:/app/static/

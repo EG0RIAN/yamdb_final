@@ -67,7 +67,7 @@ jobs:
               echo DB_PORT=${{ secrets.DB_PORT }} >> .env
 
               sudo docker pull eg0rian/yamdb_final:latest
-              sudo docker-compose up -d --build
+              sudo docker-compose up -d
               sudo docker exec -ti eg0rian_web_1 python manage.py collectstatic --no-input
               sudo docker exec -ti eg0rian_web_1 python manage.py makemigrations
               sudo docker exec -ti eg0rian_web_1 python manage.py migrate --noinput
