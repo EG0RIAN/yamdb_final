@@ -68,9 +68,9 @@ jobs:
 
               sudo docker pull eg0rian/yamdb_final:latest
               
-              sudo docker exec -ti eg0rian_infra_1 python manage.py collectstatic --no-input
-              sudo docker exec -ti eg0rian_infra_1 python manage.py makemigrations
-              sudo docker exec -ti eg0rian_infra_1 python manage.py migrate --noinput
+              sudo docker exec -ti eg0rian_web_1 python manage.py collectstatic --no-input
+              sudo docker exec -ti eg0rian_web_1 python manage.py makemigrations
+              sudo docker exec -ti eg0rian_web_1 python manage.py migrate --noinput
               sudo docker-compose up -d 
   send_message:
       runs-on: ubuntu-latest
